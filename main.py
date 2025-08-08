@@ -31,7 +31,7 @@ logger = logging.getLogger(__name__)
 
 # Cost tracking - Updated for 300-page PDF with accurate Gemini 2.0 Flash pricing
 # 300 pages × 1,290 tokens per page = 387,000 tokens
-PDF_TOKENS = 387000  # 300-page PDF tokens
+PDF_TOKENS = 487000  # 400-page PDF tokens
 INPUT_COST_PER_1M_TOKENS = 0.15  # For prompts > 128K tokens
 OUTPUT_COST_PER_1M_TOKENS = 0.60  # For prompts > 128K tokens
 CONTEXT_CACHING_COST_PER_1M_TOKENS = 0.0375  # For prompts > 128K tokens (75% discount)
@@ -613,3 +613,4 @@ if st.session_state.session_started and st.session_state.global_pdf_cache:
 elif st.session_state.session_started and not st.session_state.global_pdf_cache:
     # This case is handled above in the Start Session Section
     pass
+
